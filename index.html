@@ -1,7 +1,137 @@
 <!DOCTYPE html><head>
-	<link href="style.css" rel="stylesheet" />
-	<script src="script.js"></script>
 </head>
+
+<style>
+  body {
+	padding: 0;
+	margin: 0;
+	color: white;
+	width: 100%;
+	height: 100%;
+	background: black;
+	background: linear-gradient(to bottom, #000000, #191970);
+}
+
+.bg {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-image: url("img/bg-cloud.png");
+	background-repeat: repeat-x;
+	background-position: center bottom;
+}
+
+.filter{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #6495ED;
+	animation: colorChange;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
+	mix-blend-mode: soft-light;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes colorChange{
+	0%,
+	100% {
+		opacity: 0;
+	}
+	50% {
+		opacity: .9;
+	}
+}
+
+@keyframes rotation{
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+
+.stars {
+	background:url("img/BG2.png") repeat top center;
+	position:absolute;
+	top:0;
+	left:0;
+    width:100%;
+    height:100%;
+}
+
+.center{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+.button{
+	display: block;
+	margin: auto;
+}
+
+.moon{
+	position: relative;
+	top: 0;
+	left: 0;
+	animation: rotation 120s infinite linear;
+}
+
+.moon-rotate{
+	animation: rotation 20s infinite linear;
+}
+
+.islet{
+	position: absolute;
+	bottom: 0;
+	transform: translate(-50%, 0);
+}
+
+.left-cloud{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.right-cloud{
+	position: absolute;
+	bottom: 0;
+	transform: translate(-100%, 0);
+}
+
+.centered{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.bottom-center{
+	position: fixed;
+	bottom: 0px;
+	left: 50%;
+}
+
+.bottom-left{
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+}
+
+.bottom-right{
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+}
+</style>
 
 <audio src="Night Music.mp3" autoplay></audio>
 <div class="stars"></div>
